@@ -16,6 +16,14 @@ Video 영상의 특징은 일반적으로 매 frame은 인접한 frame과의 연
 위의 아이디어로 코드를 작성하였습니다.
 그리고 실험 결과 녹화된 비디오, N=1, 홀수번 째 frame에서만 YOLO를 사용할 때 시각적으로 보이는 장면이 바뀌는 경우 외에는 거의 없었습니다. 
 
-## 구성
+## 실행방법
 
+<pre><code>python run.py --video {VIDEO FILE} --weights {your_YOLO.weights} --cfg {your_YOLO.cfg}</code></pre>
 
+## Example
+<pre><code>python run.py --video walking_cut1.mp4 --weights yolo_weights_cfg/yolov4.weights --cfg yolo_weights_cfg/yolov4.cfg</code></pre>
+
+## OPENCV GPU가 있다면
+<pre><code>python run.py --video walking_cut1.mp4 --gpu True --weights yolo_weights_cfg/yolov4.weights --cfg yolo_weights_cfg/yolov4.cfg</code></pre>
+
+### **YOLO모델을 CUSTOM으로 학습시키는 경우 yolo.py에 있는 class 내용을 변경해야 합니다.**
